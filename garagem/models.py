@@ -10,6 +10,12 @@ class Acessorio(models.Model):
 
 class Cor(models.Model):
     descricao = models.CharField(max_length=100)
+    def __str__(self):
+        return self.nome
+
+    class Meta:
+        verbose_name = "Cor"
+        verbose_name_plural = "Cores"
 
 class Modelo(models.Model):
     nome = models.CharField(max_length=100)   
